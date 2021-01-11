@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../dummy_data.dart';
 
 class MealDetailScreen extends StatelessWidget {
@@ -90,7 +91,7 @@ class MealDetailScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(
-          isFavorite(mealId)?Icons.star:Icons.star_border,
+          isFavorite(mealId) ? Icons.star : Icons.star_border,
         ),
         onPressed: () => toggleFavorite(mealId),
       ),

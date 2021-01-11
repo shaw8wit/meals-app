@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../screens/filters_screen.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -47,13 +48,9 @@ class MainDrawer extends StatelessWidget {
               Navigator.of(context).pushReplacementNamed('/');
             },
           ),
-          buildListTile(
-            'Filter',
-            Icons.filter,
-            () {
-              Navigator.of(context).pushReplacementNamed(FiltersScreen.routeName);
-            }
-          ),
+          buildListTile('Filter', Icons.filter, () {
+            Navigator.of(context).pushReplacementNamed(FiltersScreen.routeName);
+          }),
         ],
       ),
     );

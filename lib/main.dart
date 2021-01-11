@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import './dummy_data.dart';
-import './screens/filters_screen.dart';
-import './screens/tabs_screen.dart';
-import './screens/meal_detail_screen.dart';
-import './screens/category_meals_screen.dart';
-import './models/meal.dart';
+
+import 'dummy_data.dart';
+import 'models/meal.dart';
+import 'screens/category_meals_screen.dart';
+import 'screens/filters_screen.dart';
+import 'screens/meal_detail_screen.dart';
+import 'screens/tabs_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -94,7 +95,8 @@ class _MyAppState extends State<MyApp> {
         '/': (ctx) => TabsScreen(_favoritedMeals),
         CategoryMealsScreen.routeName: (ctx) =>
             CategoryMealsScreen(_availableMeals),
-        MealDetailScreen.routeName: (ctx) => MealDetailScreen(_toggleFavorite,_isMealFavorite),
+        MealDetailScreen.routeName: (ctx) =>
+            MealDetailScreen(_toggleFavorite, _isMealFavorite),
         FiltersScreen.routeName: (ctx) => FiltersScreen(_filters, _setFilters),
       },
     );
